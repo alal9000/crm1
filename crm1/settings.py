@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts'
+    'accounts',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,26 @@ MEDIA_URL = 'images/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TIME_ZONE = 'Australia/Sydney'
+
+#SMTP Configuration
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'lucidlear@gmail.com'
+EMAIL_HOST_PASSWORD = 'ufujyunvskdydbdu'
+
+
+#S3 BUCKETS CONFIG
+
+AWS_ACCESS_KEY_ID = 'AKIAWLQDCYXS7EHXWNVQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'aaronlal-crm-bucket'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
