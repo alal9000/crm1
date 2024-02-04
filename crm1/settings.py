@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'crm1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'localhost-crm1',
-        'USER': 'postgres',
+        'NAME': 'crm',
+        'USER': 'aaronlal',
         'PASSWORD': 'Sydney45!',
-        'HOST': 'LOCALHOST',
+        'HOST': 'database-1.cpc8sioiw96u.ap-southeast-2.rds.amazonaws.com',
         'PORT': '5432'
     }
 }
